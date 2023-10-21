@@ -2,19 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:Tiwee/presentation/screens/home/home_page.dart';
+import 'package:Tiwee_bosiro/presentation/screens/home/home_page.dart';
 
 final forwardProvider = StateProvider<bool>((ref) {
   return true;
 });
 
 class MainAppbar extends StatefulWidget {
-   const MainAppbar({
-    super.key,
-    required this.widget,
-    this.havSettingBtn=false
-
-  });
+  const MainAppbar(
+      {super.key, required this.widget, this.havSettingBtn = false});
   final Widget widget;
   final bool havSettingBtn;
 
@@ -29,8 +25,10 @@ class _MainAppbarState extends State<MainAppbar>
   void changePage(PageController pageController, int index) async {
     await Future.delayed(const Duration(milliseconds: 500), () {
       index == 0
-          ? pageController.animateToPage(1, duration: const Duration(seconds: 1), curve: Curves.bounceOut)
-          : pageController.animateToPage(0, duration: const Duration(seconds: 1), curve: Curves.bounceOut);
+          ? pageController.animateToPage(1,
+              duration: const Duration(seconds: 1), curve: Curves.bounceOut)
+          : pageController.animateToPage(0,
+              duration: const Duration(seconds: 1), curve: Curves.bounceOut);
     });
   }
 
@@ -91,35 +89,37 @@ class _MainAppbarState extends State<MainAppbar>
               widget.widget
             ],
           ),
-          widget.havSettingBtn?Consumer(builder: (context, ref, child) {
-            final pageController = ref.watch(pageControllerProvider);
-            final forward = ref.watch(forwardProvider.state);
+          widget.havSettingBtn
+              ? Consumer(builder: (context, ref, child) {
+                  final pageController = ref.watch(pageControllerProvider);
+                  final forward = ref.watch(forwardProvider.state);
 
-            return GestureDetector(
-                onTap: () {
-                  print(forward.state);
-                   _controller.forward();
-                  forward.state = !forward.state;
-                  print(forward);
-                  changePage(pageController, forward.state ? 1 : 0);
-                },
-                child: Container(
-                    width: 50,
-                    height: 50,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.transparent,
-                        border: Border.all(color: Colors.grey)),
-                    child: Transform.scale(
-                        scale: 0.8,
-                        child: RotationTransition(
-                          turns:
-                              Tween(begin: 0.0, end: 3.1).animate(_controller),
-                          child: SvgPicture.asset(
-                            "assets/icons/setting.svg",
-                          ),
-                        ))));
-          }):Container()
+                  return GestureDetector(
+                      onTap: () {
+                        print(forward.state);
+                        _controller.forward();
+                        forward.state = !forward.state;
+                        print(forward);
+                        changePage(pageController, forward.state ? 1 : 0);
+                      },
+                      child: Container(
+                          width: 50,
+                          height: 50,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.transparent,
+                              border: Border.all(color: Colors.grey)),
+                          child: Transform.scale(
+                              scale: 0.8,
+                              child: RotationTransition(
+                                turns: Tween(begin: 0.0, end: 3.1)
+                                    .animate(_controller),
+                                child: SvgPicture.asset(
+                                  "assets/icons/setting.svg",
+                                ),
+                              ))));
+                })
+              : Container()
         ],
       ),
     );

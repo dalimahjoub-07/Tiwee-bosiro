@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:Tiwee/core/consts.dart';
+import 'package:Tiwee_bosiro/core/consts.dart';
 import 'package:lottie/lottie.dart';
-import 'package:Tiwee/presentation/screens/home/home_page.dart';
+import 'package:Tiwee_bosiro/presentation/screens/home/home_page.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -13,7 +13,6 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   void changePage() {
     Timer.periodic(
       const Duration(seconds: 4),
@@ -21,12 +20,10 @@ class _SplashScreenState extends State<SplashScreen> {
         Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) =>  HomePage(),
+              builder: (context) => HomePage(),
             ));
         timer.cancel();
       },
-
-
     );
   }
 
@@ -48,8 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Lottie.asset(kSplashLoading,
-                width: width / 4),
+            Lottie.asset(kSplashLoading, width: width / 4),
             const SizedBox(
               height: 20,
             ),

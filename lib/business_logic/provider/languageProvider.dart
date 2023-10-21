@@ -1,7 +1,6 @@
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:Tiwee/business_logic/model/channel.dart';
-import 'package:Tiwee/business_logic/provider/channel_Provider.dart';
+import 'package:Tiwee_bosiro/business_logic/model/channel.dart';
+import 'package:Tiwee_bosiro/business_logic/provider/channel_Provider.dart';
 
 final languageProvider =
     Provider<AsyncValue<Map<String, List<ChannelObj>>>>((ref) {

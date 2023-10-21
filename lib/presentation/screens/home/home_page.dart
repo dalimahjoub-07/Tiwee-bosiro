@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:Tiwee/presentation/screens/home/menu.dart';
-import 'package:Tiwee/presentation/screens/home/setting.dart';
+import 'package:Tiwee_bosiro/presentation/screens/home/menu.dart';
+import 'package:Tiwee_bosiro/presentation/screens/home/setting.dart';
 
 final pageControllerProvider = Provider<PageController>((ref) {
   return PageController();
@@ -18,10 +18,7 @@ class HomePage extends ConsumerWidget {
       itemCount: 2,
       controller: controller,
       scrollDirection: Axis.horizontal,
-      physics:  const NeverScrollableScrollPhysics(),
-
-
-
+      physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) => pages[index],
     );
   }

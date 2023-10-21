@@ -4,24 +4,23 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
 import 'package:line_icons/line_icon.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:Tiwee/business_logic/utils/show_snackbar.dart';
-import 'package:Tiwee/core/consts.dart';
-import 'package:Tiwee/presentation/widgets/main_appbar.dart';
-import 'package:Tiwee/presentation/widgets/setting/setting_card.dart';
+import 'package:Tiwee_bosiro/business_logic/utils/show_snackbar.dart';
+import 'package:Tiwee_bosiro/core/consts.dart';
+import 'package:Tiwee_bosiro/presentation/widgets/main_appbar.dart';
+import 'package:Tiwee_bosiro/presentation/widgets/setting/setting_card.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Setting extends StatelessWidget {
   const Setting({super.key});
 
-  void openTelegram()async{
-
-    if (!await launch("https://telegram.me/NatureSmiling")) throw 'Could not launch telegram';
-
+  void openTelegram() async {
+    if (!await launch("https://telegram.me/NatureSmiling"))
+      throw 'Could not launch telegram';
   }
-  void openGithub()async{
 
-    if (!await launch("https://github.com/NatureSmiling")) throw 'Could not launch github';
-
+  void openGithub() async {
+    if (!await launch("https://github.com/NatureSmiling"))
+      throw 'Could not launch github';
   }
 
   @override
@@ -77,7 +76,9 @@ class Setting extends StatelessWidget {
                         crossAxisCellCount: 2,
                         mainAxisCellCount: 2,
                         child: SettingCard(
-                          function: ShowSnackBar(context: context,text: "Coming sooooon :)").show,
+                          function: ShowSnackBar(
+                                  context: context, text: "Coming sooooon :)")
+                              .show,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -100,11 +101,17 @@ class Setting extends StatelessWidget {
                         crossAxisCellCount: 2,
                         mainAxisCellCount: 2,
                         child: SettingCard(
-                          function: ShowSnackBar(context: context,text: "Coming sooooon :)").show,
+                          function: ShowSnackBar(
+                                  context: context, text: "Coming sooooon :)")
+                              .show,
                           child: const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(LineIcons.sun,size: 50,color: Colors.white70,),
+                              Icon(
+                                LineIcons.sun,
+                                size: 50,
+                                color: Colors.white70,
+                              ),
                               SizedBox(
                                 height: 12,
                               ),
@@ -120,8 +127,9 @@ class Setting extends StatelessWidget {
                         crossAxisCellCount: 2,
                         mainAxisCellCount: 2,
                         child: SettingCard(
-                          function: ShowSnackBar(context: context,text: "Coming sooooon :)").show,
-
+                          function: ShowSnackBar(
+                                  context: context, text: "Coming sooooon :)")
+                              .show,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -164,7 +172,10 @@ class Setting extends StatelessWidget {
                       crossAxisCellCount: 1,
                       mainAxisCellCount: 4,
                       child: SettingCard(
-                        function: ShowSnackBar(context: context,text: "No update available yet... :)").show,
+                        function: ShowSnackBar(
+                                context: context,
+                                text: "No update available yet... :)")
+                            .show,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
@@ -186,8 +197,9 @@ class Setting extends StatelessWidget {
                         crossAxisCellCount: 6,
                         mainAxisCellCount: 3,
                         child: SettingCard(
-                          function: ShowSnackBar(context: context,text: "Coming sooooooon :)").show,
-
+                          function: ShowSnackBar(
+                                  context: context, text: "Coming sooooooon :)")
+                              .show,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -197,11 +209,11 @@ class Setting extends StatelessWidget {
                                 color: Colors.white70,
                                 width: 38,
                               ),
-                            const  SizedBox(
+                              const SizedBox(
                                 height: 25,
                               ),
                               RichText(
-                                text:const TextSpan(
+                                text: const TextSpan(
                                     text: "Parental\n",
                                     style: TextStyle(
                                         color: Colors.white70, fontSize: 16),
@@ -231,5 +243,3 @@ class Setting extends StatelessWidget {
     );
   }
 }
-
-

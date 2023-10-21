@@ -2,19 +2,19 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:Tiwee/business_logic/provider/category_provider.dart';
-import 'package:Tiwee/business_logic/provider/country_code.dart';
-import 'package:Tiwee/business_logic/provider/country_provider.dart';
-import 'package:Tiwee/presentation/screens/home/country_channels.dart';
-import 'package:Tiwee/presentation/widgets/main_appbar.dart';
-import 'package:Tiwee/presentation/widgets/sorted_by_category_widget/fav_all_card.dart';
+import 'package:Tiwee_bosiro/business_logic/provider/category_provider.dart';
+import 'package:Tiwee_bosiro/business_logic/provider/country_code.dart';
+import 'package:Tiwee_bosiro/business_logic/provider/country_provider.dart';
+import 'package:Tiwee_bosiro/presentation/screens/home/country_channels.dart';
+import 'package:Tiwee_bosiro/presentation/widgets/main_appbar.dart';
+import 'package:Tiwee_bosiro/presentation/widgets/sorted_by_category_widget/fav_all_card.dart';
 
 final currentIndexProvider = StateProvider<int>((ref) {
   return 0;
 });
 
 class SortedByCountryPage extends ConsumerWidget {
-  const SortedByCountryPage({super.key,required this.allChanellsCount});
+  const SortedByCountryPage({super.key, required this.allChanellsCount});
   final int allChanellsCount;
 
   @override
@@ -109,7 +109,8 @@ class SortedByCountryPage extends ConsumerWidget {
                                                                 .group(0)
                                                                 .codeUnitAt(0) +
                                                             127397)),
-                                            style: const TextStyle(fontSize: 65),
+                                            style:
+                                                const TextStyle(fontSize: 65),
                                           ),
                                         ),
                                       ),
@@ -130,9 +131,7 @@ class SortedByCountryPage extends ConsumerWidget {
                                       ),
                                       Text(
                                         index == currentIndex.state
-                                            ? "${countrys
-                                                .value![countryCode2[index][0]]!
-                                                .length} channels"
+                                            ? "${countrys.value![countryCode2[index][0]]!.length} channels"
                                             : "",
                                         style: const TextStyle(
                                             color: Colors.grey, fontSize: 16),

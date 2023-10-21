@@ -2,16 +2,16 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lottie/lottie.dart';
-import 'package:Tiwee/core/consts.dart';
+import 'package:Tiwee_bosiro/core/consts.dart';
 
 class TvCard extends StatelessWidget {
   const TvCard(
       {super.key,
-        required this.size,
-        required this.index,
-        required this.data,
-        required this.ref,
-        required this.country});
+      required this.size,
+      required this.index,
+      required this.data,
+      required this.ref,
+      required this.country});
   final size;
   final int index;
   final WidgetRef ref;
@@ -35,7 +35,7 @@ class TvCard extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25),
                   image:
-                  DecorationImage(image: imageProvider, fit: BoxFit.cover),
+                      DecorationImage(image: imageProvider, fit: BoxFit.cover),
                 ),
               ),
 
@@ -43,7 +43,6 @@ class TvCard extends StatelessWidget {
                   child: SizedBox(
                       width: 50, child: Lottie.asset(kLoading, width: 60))),
               imageUrl: data[country]![index].logo,
-
 
               // progressIndicatorBuilder: (context, url, progress) => ProgressIndicator(value: progress.progress,),
               fit: BoxFit.cover,
@@ -61,8 +60,7 @@ class TvCard extends StatelessWidget {
               child: Text(
                 data[country]![index].name,
                 overflow: TextOverflow.ellipsis,
-                style:
-                const TextStyle(color: Colors.white, fontSize: 12),
+                style: const TextStyle(color: Colors.white, fontSize: 12),
               ),
             ),
           ],

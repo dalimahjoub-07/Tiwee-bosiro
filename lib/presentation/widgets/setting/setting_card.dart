@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:Tiwee/core/consts.dart';
+import 'package:Tiwee_bosiro/core/consts.dart';
 
 class SettingCard extends StatelessWidget {
-  const SettingCard({super.key,required this.function, required this.child});
+  const SettingCard({super.key, required this.function, required this.child});
   final Widget child;
   final Function function;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         function();
       },
       child: Container(

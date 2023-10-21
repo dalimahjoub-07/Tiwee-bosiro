@@ -299,6 +299,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.2.0"
+  functional_data:
+    dependency: transitive
+    description:
+      name: functional_data
+      sha256: aefdec4365452283b2a7cf420a3169654d51d3e9553069a22d76680d7a9d7c3d
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.1"
   fwfh_text_style:
     dependency: transitive
     description:
@@ -387,6 +395,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.5"
+  json2yaml:
+    dependency: transitive
+    description:
+      name: json2yaml
+      sha256: da94630fbc56079426fdd167ae58373286f603371075b69bf46d848d63ba3e51
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.1"
   json_annotation:
     dependency: transitive
     description:
@@ -579,6 +595,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.1.0"
+  plain_optional:
+    dependency: transitive
+    description:
+      name: plain_optional
+      sha256: e5856f4c3e5a5e5f47e9c3d13ccbb674d822f95c408869a19ee9a4391cc2e820
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   platform:
     dependency: transitive
     description:
@@ -627,6 +651,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
+  pubspec_yaml:
+    dependency: "direct main"
+    description:
+      name: pubspec_yaml
+      sha256: "312424c243f98a74b912c028cbedb4776a47f80bf7d8b8791291c4486dc3f02a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.0"
   riverpod:
     dependency: transitive
     description:
@@ -752,6 +784,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
+  sum_types:
+    dependency: transitive
+    description:
+      name: sum_types
+      sha256: c0a0fad9a518d011987e1d9f27fc336194294e55dafdc3699363e52aa5776e09
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.5"
   synchronized:
     dependency: transitive
     description:

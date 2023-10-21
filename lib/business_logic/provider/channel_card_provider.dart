@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:Tiwee/business_logic/model/channel_model.dart';
+import 'package:Tiwee_bosiro/business_logic/model/channel_model.dart';
 
 final channelCardProvider = StateProvider<List<ChannelModel>>((ref) {
   List<ChannelModel> channelsCard = [
@@ -63,7 +63,6 @@ final channelCardProvider = StateProvider<List<ChannelModel>>((ref) {
         channelCount: 0),
     ChannelModel(
         name: "Shop", iconAddress: "assets/icons/shop.svg", channelCount: 0),
-
   ];
   return channelsCard;
 });

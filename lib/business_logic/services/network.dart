@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:Tiwee/business_logic/model/channel.dart';
+import 'package:Tiwee_bosiro/business_logic/model/channel.dart';
 
 Future<List<ChannelObj>?> fetchChannels() async {
   List<ChannelObj> channels = [];
@@ -15,7 +15,6 @@ Future<List<ChannelObj>?> fetchChannels() async {
       if (channelObj.categories.isNotEmpty) {
         if (channelObj.categories[0].name != "XXX") {
           channels.add(channelObj);
-
         }
       }
     }

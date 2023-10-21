@@ -3,9 +3,9 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:lottie/lottie.dart';
-import 'package:Tiwee/business_logic/model/channel.dart';
-import 'package:Tiwee/core/consts.dart';
-import 'package:Tiwee/presentation/screens/home/player.dart';
+import 'package:Tiwee_bosiro/business_logic/model/channel.dart';
+import 'package:Tiwee_bosiro/core/consts.dart';
+import 'package:Tiwee_bosiro/presentation/screens/home/player.dart';
 
 class SortedByCategoryPage extends StatefulWidget {
   const SortedByCategoryPage(
@@ -130,7 +130,7 @@ class _SortedByCategoryPageState extends State<SortedByCategoryPage> {
                                                             20)),
                                                 child: Padding(
                                                   padding: const EdgeInsets
-                                                          .symmetric(
+                                                      .symmetric(
                                                       horizontal: 18.0,
                                                       vertical: 8),
                                                   child: Row(
