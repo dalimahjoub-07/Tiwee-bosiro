@@ -6,7 +6,7 @@ import 'package:Tiwee/presentation/screens/splash/splash_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
       statusBarColor: Color(0xff1a1726)
   ));
 
@@ -20,8 +20,8 @@ void main() {
           title: "Tiwee",
           debugShowCheckedModeBanner: false,
           theme: ThemeData(textTheme: GoogleFonts.soraTextTheme(),
-          scaffoldBackgroundColor: Color(0xff1a1726),),
-        home:  MyApp(),
+          scaffoldBackgroundColor: const Color(0xff1a1726),),
+        home:  const MyApp(),
 
       ),
 
@@ -29,7 +29,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-   MyApp({Key? key}) : super(key: key);
+   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {

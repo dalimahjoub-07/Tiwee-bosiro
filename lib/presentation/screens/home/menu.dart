@@ -13,7 +13,7 @@ import 'package:Tiwee/presentation/widgets/home_page_widget/big_card_channel.dar
 import 'package:Tiwee/presentation/widgets/main_appbar.dart';
 
 class Menu extends ConsumerWidget {
-  const Menu({Key? key}) : super(key: key);
+  const Menu({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -59,7 +59,7 @@ class Menu extends ConsumerWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Expanded(

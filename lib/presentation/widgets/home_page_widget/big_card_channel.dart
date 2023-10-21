@@ -4,13 +4,12 @@ import 'package:Tiwee/core/consts.dart';
 
 class BigCardChannels extends StatelessWidget {
   const BigCardChannels(
-      {Key? key,
+      {super.key,
         required this.size,
         required this.icon,
         required this.text,
         required this.channelsCount,
-        required this.index})
-      : super(key: key);
+        required this.index});
 
   final Size size;
   final String icon;
@@ -21,6 +20,10 @@ class BigCardChannels extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 70,
+      width: size.width / 4.3,
+      decoration:
+      BoxDecoration(color: kGray, borderRadius: BorderRadius.circular(30)),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 18.0),
         child: Column(
@@ -30,7 +33,7 @@ class BigCardChannels extends StatelessWidget {
             SvgPicture.asset(
               icon,
             ),
-            SizedBox(
+            const SizedBox(
               height: 13,
             ),
             index == 0
@@ -50,20 +53,20 @@ class BigCardChannels extends StatelessWidget {
                         color: Colors.white),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Text(
                   text.split(" ")[1],
-                  style: TextStyle(fontSize: 23, color: Colors.white),
+                  style: const TextStyle(fontSize: 23, color: Colors.white),
                 )
               ],
             )
                 : Text(
               text,
-              style: TextStyle(fontSize: 23, color: Colors.white),
+              style: const TextStyle(fontSize: 23, color: Colors.white),
             ),
-            SizedBox(
+            const SizedBox(
               height: 13,
             ),
             Row(
@@ -76,22 +79,18 @@ class BigCardChannels extends StatelessWidget {
                       ? Colors.amber
                       : Colors.blueAccent,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 5,
                 ),
                 Text(
                   "${channelsCount.toString()} Channels",
-                  style: TextStyle(fontSize: 17, color: Colors.grey),
+                  style: const TextStyle(fontSize: 17, color: Colors.grey),
                 )
               ],
             )
           ],
         ),
       ),
-      height: 70,
-      width: size.width / 4.3,
-      decoration:
-      BoxDecoration(color: kGray, borderRadius: BorderRadius.circular(30)),
     );
   }
 }

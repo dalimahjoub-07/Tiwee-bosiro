@@ -14,7 +14,7 @@ final currentIndexProvider = StateProvider<int>((ref) {
 });
 
 class SortedByCountryPage extends ConsumerWidget {
-  const SortedByCountryPage({Key? key,required this.allChanellsCount}) : super(key: key);
+  const SortedByCountryPage({super.key,required this.allChanellsCount});
   final int allChanellsCount;
 
   @override
@@ -69,7 +69,7 @@ class SortedByCountryPage extends ConsumerWidget {
                       flex: 1,
                     ),
                     Center(
-                      child: Container(
+                      child: SizedBox(
                         height: 200,
                         width: double.infinity / 4,
                         child: CarouselSlider.builder(
@@ -109,7 +109,7 @@ class SortedByCountryPage extends ConsumerWidget {
                                                                 .group(0)
                                                                 .codeUnitAt(0) +
                                                             127397)),
-                                            style: TextStyle(fontSize: 65),
+                                            style: const TextStyle(fontSize: 65),
                                           ),
                                         ),
                                       ),
@@ -130,10 +130,9 @@ class SortedByCountryPage extends ConsumerWidget {
                                       ),
                                       Text(
                                         index == currentIndex.state
-                                            ? countrys
+                                            ? "${countrys
                                                 .value![countryCode2[index][0]]!
-                                                .length
-                                                .toString()+" channels"
+                                                .length} channels"
                                             : "",
                                         style: const TextStyle(
                                             color: Colors.grey, fontSize: 16),
@@ -161,7 +160,7 @@ class SortedByCountryPage extends ConsumerWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              FavAllCard(
+                              const FavAllCard(
                                 text: "Fav",
                                 icon: FontAwesomeIcons.star,
                                 count: 25,
@@ -177,21 +176,21 @@ class SortedByCountryPage extends ConsumerWidget {
                         Container(
                           width: 80,
                           height: 50,
-                          child: Icon(
-                            Icons.arrow_forward_ios_outlined,
-                            color: Colors.white,
-                          ),
                           decoration: BoxDecoration(
                               gradient: LinearGradient(
                                   begin: Alignment.centerLeft,
                                   end: Alignment.centerRight,
                                   colors: [
-                                    Color(0xff9969C7),
-                                    Color(0xff6A359C).withOpacity(0.6),
+                                    const Color(0xff9969C7),
+                                    const Color(0xff6A359C).withOpacity(0.6),
                                   ]),
-                              borderRadius: BorderRadius.only(
+                              borderRadius: const BorderRadius.only(
                                   topLeft: Radius.circular(20),
                                   topRight: Radius.circular(20))),
+                          child: const Icon(
+                            Icons.arrow_forward_ios_outlined,
+                            color: Colors.white,
+                          ),
                         )
                       ],
                     ),
@@ -203,7 +202,7 @@ class SortedByCountryPage extends ConsumerWidget {
         );
       },
       error: (error, stackTrace) => Text(error.toString()),
-      loading: () => CircularProgressIndicator(),
+      loading: () => const CircularProgressIndicator(),
     );
   }
 }

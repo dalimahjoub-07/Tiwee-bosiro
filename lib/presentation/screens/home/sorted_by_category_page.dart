@@ -9,8 +9,7 @@ import 'package:Tiwee/presentation/screens/home/player.dart';
 
 class SortedByCategoryPage extends StatefulWidget {
   const SortedByCategoryPage(
-      {Key? key, required this.categoryName, required this.channels})
-      : super(key: key);
+      {super.key, required this.categoryName, required this.channels});
 
   final String categoryName;
   final List<ChannelObj> channels;
@@ -40,11 +39,11 @@ class _SortedByCategoryPageState extends State<SortedByCategoryPage> {
                       )))
               : Stack(
                   children: [
-                    Container(
+                    SizedBox(
                       width: double.infinity,
                       child: AnimatedOpacity(
                           opacity: 0.2,
-                          duration: Duration(seconds: 1),
+                          duration: const Duration(seconds: 1),
                           child: CachedNetworkImage(
                             imageUrl:
                                 kCategoryType[widget.categoryName].toString(),
@@ -55,14 +54,14 @@ class _SortedByCategoryPageState extends State<SortedByCategoryPage> {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Container(
+                      child: SizedBox(
                         width: double.infinity,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Expanded(
-                                child: Container(
+                                child: SizedBox(
                               width: 140,
                               height: 140,
                               child: CachedNetworkImage(
@@ -91,7 +90,7 @@ class _SortedByCategoryPageState extends State<SortedByCategoryPage> {
                                 fit: BoxFit.cover,
                               ),
                             )),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
                             Expanded(

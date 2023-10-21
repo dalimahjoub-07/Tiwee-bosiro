@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:Tiwee/core/consts.dart';
 
 class SettingCard extends StatelessWidget {
-  const SettingCard({Key? key,required this.function, required this.child}) : super(key: key);
+  const SettingCard({super.key,required this.function, required this.child});
   final Widget child;
   final Function function;
 

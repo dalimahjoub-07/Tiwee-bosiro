@@ -6,13 +6,12 @@ import 'package:Tiwee/core/consts.dart';
 
 class TvCard extends StatelessWidget {
   const TvCard(
-      {Key? key,
+      {super.key,
         required this.size,
         required this.index,
         required this.data,
         required this.ref,
-        required this.country})
-      : super(key: key);
+        required this.country});
   final size;
   final int index;
   final WidgetRef ref;
@@ -50,21 +49,21 @@ class TvCard extends StatelessWidget {
               fit: BoxFit.cover,
             ),
             Container(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               width: double.infinity,
               alignment: Alignment.bottomCenter,
+              height: 50,
+              decoration: BoxDecoration(
+                  color: Colors.grey.shade900,
+                  borderRadius: const BorderRadius.only(
+                      bottomLeft: Radius.circular(25),
+                      bottomRight: Radius.circular(25))),
               child: Text(
                 data[country]![index].name,
                 overflow: TextOverflow.ellipsis,
                 style:
                 const TextStyle(color: Colors.white, fontSize: 12),
               ),
-              height: 50,
-              decoration: BoxDecoration(
-                  color: Colors.grey.shade900,
-                  borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(25),
-                      bottomRight: Radius.circular(25))),
             ),
           ],
         ));

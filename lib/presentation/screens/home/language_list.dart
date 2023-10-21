@@ -5,7 +5,7 @@ import 'package:Tiwee/core/consts.dart';
 import 'package:Tiwee/presentation/screens/home/player.dart';
 import 'package:lottie/lottie.dart';
 class LanguageList extends StatelessWidget {
-  const LanguageList({Key? key, required this.channels}) : super(key: key);
+  const LanguageList({super.key, required this.channels});
   final List<ChannelObj> channels;
 
   @override
@@ -30,7 +30,7 @@ class LanguageList extends StatelessWidget {
                       width: 50,
                       height: 50,
                       child: CachedNetworkImage(
-                          errorWidget: (context, url, error) => Icon(Icons.warning,color: Colors.amber),
+                          errorWidget: (context, url, error) => const Icon(Icons.warning,color: Colors.amber),
                           fit: BoxFit.cover,
                           placeholder: (context, url) => Center(
                               child: SizedBox(

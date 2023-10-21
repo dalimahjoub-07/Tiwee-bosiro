@@ -11,7 +11,7 @@ import 'package:Tiwee/presentation/widgets/setting/setting_card.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Setting extends StatelessWidget {
-  const Setting({Key? key}) : super(key: key);
+  const Setting({super.key});
 
   void openTelegram()async{
 
@@ -64,7 +64,7 @@ class Setting extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Expanded(
@@ -85,10 +85,10 @@ class Setting extends StatelessWidget {
                                 "assets/icons/saved.svg",
                                 color: Colors.white70,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 12,
                               ),
-                              Text(
+                              const Text(
                                 "Saved show",
                                 style: TextStyle(
                                     color: Colors.white70, fontSize: 18),
@@ -101,9 +101,9 @@ class Setting extends StatelessWidget {
                         mainAxisCellCount: 2,
                         child: SettingCard(
                           function: ShowSnackBar(context: context,text: "Coming sooooon :)").show,
-                          child: Column(
+                          child: const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
+                            children: [
                               Icon(LineIcons.sun,size: 50,color: Colors.white70,),
                               SizedBox(
                                 height: 12,
@@ -132,7 +132,7 @@ class Setting extends StatelessWidget {
                               const SizedBox(
                                 height: 12,
                               ),
-                              Text(
+                              const Text(
                                 "Set alarm",
                                 style: TextStyle(
                                     color: Colors.white70, fontSize: 18),
@@ -168,7 +168,7 @@ class Setting extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Text(
+                            const Text(
                               "Check for update",
                               style: TextStyle(
                                   color: Colors.white70, fontSize: 18),

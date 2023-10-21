@@ -46,8 +46,9 @@ final categoryProvider =
 
           switch (channel.categories[0].name) {
             case "Animation":
-              categoriesChannels.state.forEach((element) =>
-                  element.name == "Animation" ? element.channelCount++ : null);
+              for (var element in categoriesChannels.state) {
+                element.name == "Animation" ? element.channelCount++ : null;
+              }
               sortedByCategory["Animation"]!.add(channel);
 
               break;
@@ -180,8 +181,9 @@ final categoryProvider =
               break;
 
             case "Sports":
-              categoriesChannels.state.forEach((element) =>
-                  element.name == "Sports" ? element.channelCount++ : null);
+              for (var element in categoriesChannels.state) {
+                element.name == "Sports" ? element.channelCount++ : null;
+              }
 
               sortedByCategory["Sports"]!.add(channel);
 
@@ -197,8 +199,9 @@ final categoryProvider =
               break;
 
             case "Auto":
-              categoriesChannels.state.forEach((element) =>
-                  element.name == "Auto" ? element.channelCount++ : null);
+              for (var element in categoriesChannels.state) {
+                element.name == "Auto" ? element.channelCount++ : null;
+              }
 
               sortedByCategory["Auto"]!.add(channel);
               break;

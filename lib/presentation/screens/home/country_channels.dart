@@ -20,7 +20,7 @@ import 'package:Tiwee/presentation/widgets/tv_card.dart';
 
 
 class CountryChannels extends ConsumerWidget {
-  const CountryChannels({Key? key, required this.country}) : super(key: key);
+  const CountryChannels({super.key, required this.country});
   final String country;
 
   @override
@@ -33,7 +33,7 @@ class CountryChannels extends ConsumerWidget {
       child: Scaffold(
           body: Column(
         children: [
-           MainAppbar(widget: Text(country,style: TextStyle(color: Colors.white70),)),
+           MainAppbar(widget: Text(country,style: const TextStyle(color: Colors.white70),)),
           channels.when(
             data: (data) => Expanded(
               child: Container(

@@ -6,7 +6,7 @@ import 'package:Tiwee/presentation/screens/home/language_list.dart';
 import 'package:lottie/lottie.dart';
 
 class Language extends ConsumerWidget {
-  const Language({Key? key}) : super(key: key);
+  const Language({super.key});
 
   @override
   Widget build(BuildContext context, ref) {

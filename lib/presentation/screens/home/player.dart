@@ -4,7 +4,7 @@ import 'package:Tiwee/core/consts.dart';
 import 'package:lottie/lottie.dart';
 
 class Player extends StatelessWidget {
-  Player({Key? key, required this.url}) : super(key: key);
+  Player({super.key, required this.url});
   final String url;
 
   var betterPlayerConfiguration = BetterPlayerConfiguration(

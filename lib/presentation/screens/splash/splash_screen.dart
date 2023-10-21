@@ -6,7 +6,7 @@ import 'package:lottie/lottie.dart';
 import 'package:Tiwee/presentation/screens/home/home_page.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();

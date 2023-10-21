@@ -8,8 +8,8 @@ final pageControllerProvider = Provider<PageController>((ref) {
 });
 
 class HomePage extends ConsumerWidget {
-  HomePage({Key? key}) : super(key: key);
-  final List<Widget> pages = [Menu(), Setting()];
+  HomePage({super.key});
+  final List<Widget> pages = [const Menu(), const Setting()];
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -18,7 +18,7 @@ class HomePage extends ConsumerWidget {
       itemCount: 2,
       controller: controller,
       scrollDirection: Axis.horizontal,
-      physics:  NeverScrollableScrollPhysics(),
+      physics:  const NeverScrollableScrollPhysics(),
 
 
 

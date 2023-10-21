@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class FavAllCard extends StatelessWidget {
   const FavAllCard({
-    Key? key,
+    super.key,
     required this.text,
     required this.count,
     required this.icon,
-  }) : super(key: key);
+  });
   final String text;
   final int count;
   final IconData icon;
@@ -16,6 +16,9 @@ class FavAllCard extends StatelessWidget {
     return Container(
       width: 150,
       height: 50,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(17),
+          color: Colors.black.withOpacity(0.5)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -25,17 +28,14 @@ class FavAllCard extends StatelessWidget {
           ),
           Text(
             text,
-            style: TextStyle(color: Colors.white, fontSize: 20),
+            style: const TextStyle(color: Colors.white, fontSize: 20),
           ),
           Text(
             count.toString(),
-            style: TextStyle(color: Colors.white70),
+            style: const TextStyle(color: Colors.white70),
           ),
         ],
       ),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(17),
-          color: Colors.black.withOpacity(0.5)),
     );
   }
 }

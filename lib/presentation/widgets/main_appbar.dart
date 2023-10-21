@@ -9,12 +9,12 @@ final forwardProvider = StateProvider<bool>((ref) {
 });
 
 class MainAppbar extends StatefulWidget {
-   MainAppbar({
-    Key? key,
+   const MainAppbar({
+    super.key,
     required this.widget,
     this.havSettingBtn=false
 
-  }) : super(key: key);
+  });
   final Widget widget;
   final bool havSettingBtn;
 
@@ -29,8 +29,8 @@ class _MainAppbarState extends State<MainAppbar>
   void changePage(PageController pageController, int index) async {
     await Future.delayed(const Duration(milliseconds: 500), () {
       index == 0
-          ? pageController.animateToPage(1, duration: Duration(seconds: 1), curve: Curves.bounceOut)
-          : pageController.animateToPage(0, duration: Duration(seconds: 1), curve: Curves.bounceOut);
+          ? pageController.animateToPage(1, duration: const Duration(seconds: 1), curve: Curves.bounceOut)
+          : pageController.animateToPage(0, duration: const Duration(seconds: 1), curve: Curves.bounceOut);
     });
   }
 
